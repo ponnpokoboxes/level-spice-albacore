@@ -49,7 +49,7 @@ module.exports = {
 
 async function callApi(osaifumei, key, hanni, zyunnbann) {
   try{
-    const uri = encodeURI('https://script.google.com/macros/s/AKfycbz3Abd7feQ9N_JkQhYXtMFCaT4_I0i2ujfGHunInRPmyvn6Q6_gT_RWGI-KHZtGJ2dQ/exec?p1=' + osaifumei + '&p2=' + key + '&p3=' + hanni + '&p4=' + zyunnbann);
+    const uri = encodeURI(String(process.env.LEAVES) + osaifumei + '&p2=' + key + '&p3=' + hanni + '&p4=' + zyunnbann);
     console.log(uri);
     const res = await fetch(uri);
   /*https://script.google.com/macros/s/AKfycbyvXxbLX9M2N79ItL-xGq9pT8DroqrbkorIDtm-DJ9QCLx9NXVLJWvBDcmTSaVN_3f8/exec?p1=はわのふ（khavanoff_8608）&p2=nonono&p3=20231110*/
